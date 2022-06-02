@@ -1,0 +1,42 @@
+@import '/src/styles/variables.less';
+@import '/src/styles/mixin.less';
+
+.comp-wrapper {
+  padding: 15px;
+  width: 100%;
+
+  // for Desktop
+  @media (min-width: @screen-sm) {
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.layout-container {
+}
+
+.nav {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  z-index: 2;
+
+  a {
+    background-color: #eee;
+    border-radius: 30px;
+    padding: 5px 10px;
+  }
+}
+
+.layout-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  z-index: 2;
+}
+
+// DARK-MODE--COMP
+.comp-wrapper--alwaysDarkMode,
+:global(.@{THEME--DARK}) .comp-wrapper {
+}
